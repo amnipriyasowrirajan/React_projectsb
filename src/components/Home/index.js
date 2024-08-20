@@ -7,6 +7,7 @@ export default function Home(props) {
 
   const h1Ref = useRef();
   const [counter, setCounter] = useState(0);
+  const [counter2, setCounter2] = useState(0);
   //   console.log(h1ref);
 
   //   setTimeout(() => {
@@ -23,11 +24,19 @@ export default function Home(props) {
   useEffect(() => {
     // fetching course  information -> when the url changes
     console.log(h1Ref);
-  }, []);
+  }, [counter]);
 
   return (
-    <h1 ref={h1Ref} onClick={() => setCounter((counter) => counter + 1)}>
-      Home {counter}. Go to <Link to="/about">About</Link>
-    </h1>
+    <div>
+      <h1>{counter}</h1>
+      <h1>{counter2}</h1>
+
+      <button onClick={() => setCounter((counter) => counter + 1)}>
+        Counter 1
+      </button>
+      <button onClick={() => setCounter2((counter2) => counter2 + 1)}>
+        Counter 2
+      </button>
+    </div>
   );
 }
