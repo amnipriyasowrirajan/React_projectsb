@@ -7,3 +7,5 @@ npm i react-router-dom --save
 - useRef => used for google captcha , settimeout
 
 - useEffect => as amonitor of your component by monitor =>this hook would be able to monitor any changes you like inside this particular component
+
+- ContextAPI
